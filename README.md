@@ -4,7 +4,7 @@ Use this package to collect `serverStatus` JSON from MongoDB Enterprise or Atlas
 
 ## 1 Download the package
 
-1. Open the [GitHub repository](https://github.com/JesusGitHubOracle/jlr-oracle-mongodb-assessment).
+1. Open the [GitHub repository](https://github.com/JesusGitHubOracle/jlr-oracle-mongoapi-assessment).
 2. Locate the uploaded quick assessment ZIP. The package in this folder is available as [quick-assessment.zip](./quick-assessment.zip).
 3. Open the ZIP file page and select **Download raw file**. GitHub may show a download icon instead of this label.
 4. Extract the ZIP into a working directory on your collection machine.
