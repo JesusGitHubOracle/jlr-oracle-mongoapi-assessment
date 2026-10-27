@@ -36,7 +36,7 @@ Use a MongoDB account with permission to run `serverStatus` against each endpoin
 
 ## 3 Download the existing extraction script
 
-The quick assessment ZIP requires the separate [mongoserverStatus.sh extraction script](./mongoserverStatus.sh).
+The quick assessment ZIP requires the separate [mongoserverStatus.sh extraction script]https://github.com/oramatt/mongotools/blob/main/mongoserverStatus.sh)).
 
 1. Open that script in the GitHub repository.
 2. Select **Download raw file**.
