@@ -1,0 +1,3 @@
+# One cluster name and URI per line, separated by |. Replace these examples.
+cluster-01|mongodb+srv://USERNAME:PASSWORD@cluster01.example.mongodb.net/admin
+cluster-02|mongodb://USERNAME:PASSWORD@mongo02.example.com:27017/admin?authSource=admin
