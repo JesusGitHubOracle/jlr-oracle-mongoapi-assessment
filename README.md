@@ -83,7 +83,7 @@ cluster-02|mongodb://USERNAME:PASSWORD@mongo02.example.com:27017/admin?authSourc
 - Preserve the authentication, TLS, replica set, and other connection options required by your deployment. Percent-encode special characters in URI usernames and passwords.
 - Blank lines and comment lines starting with `#` are ignored.
 
-The list contains credentials. Keep it private, do not commit it to GitHub, and do not include it in the files returned for assessment. Run collection on a trusted machine because the underlying extraction script passes the URI to `mongosh` as a process argument.
+The list contains credentials. Keep it private, do not include it in the files returned for assessment. Run collection on a trusted machine because the underlying extraction script passes the URI to `mongosh` as a process argument.
 
 **Capture scope:** one cluster URI captures the selected server or router. It does not automatically collect every member of a replica set or every shard. If member-specific evidence is required, add separate entries with unique names and administrator-supplied member URIs. Record which endpoints were captured.
 
@@ -150,18 +150,18 @@ If a connection hangs, use **Ctrl+C**, investigate connectivity, and retry. This
 
 ## 7 Complete the sizing spreadsheet
 
-Open the Excel workbook included in the ZIP. Depending on the package version, it may be named `MongoDB customer sizing.xlsx` or `MongoDB-SAN-sizing.xlsx`.
+Open the Excel workbook included in the ZIP,  `MongoDB customer sizing.xlsx` 
 
 1. Open the **Cluster sizing** worksheet.
 2. Replace the placeholder cluster names with the same names used in `clusters.txt`.
-3. Complete one row for each of the 30 clusters. Yellow cells are customer inputs. Grey cells calculate `totalVcpu` and `totalMemoryGb` automatically.
+3. Complete one row for each of the clusters. Yellow cells are customer inputs. Grey cells calculate `totalVcpu` and `totalMemoryGb` automatically.
 4. Read the **Field guide** worksheet for definitions and the supplied example.
 5. Leave unknown values blank and identify missing information when returning the workbook. Enter a numeric zero only when it is a measured value.
 
 | Field | What to provide |
 | --- | --- |
 | `name` | Unique cluster name matching its capture directory. |
-| `tier` | Atlas tier, such as `M30`, or Enterprise host class. |
+| `tier` | Atlas tier, such as `M30`, `M40` or Enterprise host class. |
 | `nodes` | Number of data-bearing MongoDB members. Exclude routers, config servers, and arbiters. |
 | `vcpuPerNode` | Provisioned vCPU per member. Use the average if members have different capacities. |
 | `totalVcpu` | Calculated as `nodes × vcpuPerNode`. |
@@ -185,7 +185,7 @@ A single `serverStatus` snapshot does not provide historical normal and peak CPU
 
 Provide the assessment team with:
 
-- The completed sizing workbook for all 30 clusters.
+- The completed sizing workbook for all the clusters.
 - The `captures` directory containing the selected successful JSON files, with cluster directory names preserved.
 - A note identifying failed or missing captures, unknown sizing inputs, capture dates, and any member-specific capture scope.
 
